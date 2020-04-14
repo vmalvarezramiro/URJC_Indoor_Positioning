@@ -16,14 +16,14 @@ import com.indoorpositioning.services.ComponentService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/addComponents")
+@RequestMapping("/")
 public class AddComponentsController {
 	@Autowired
 	private ComponentService componentService;
 	@Autowired
 	private BeaconService beaconService;
 
-	@GetMapping("")
+	@GetMapping("/addComponents")
 	public ModelAndView renderPageGet_AC() {
 		ModelAndView mav= new ModelAndView("classpath:/templates/addComponents.html");
 		mav.addObject("component", new Component());
@@ -34,7 +34,7 @@ public class AddComponentsController {
 		return mav;
 	}
 
-	@PostMapping("")
+	@PostMapping("/addComponents")
 	public ModelAndView renderPagePost_AC(@ModelAttribute("component") Component component) {
 		ModelAndView mav= new ModelAndView("classpath:/templates/addComponents.html");
 		String feedback = "El componente '"+component.getName()+"' se añadio correctamente";
