@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    
+<head>
+	<meta charset="ISO-8859-1">
+</head>
+
+<body>
+	<nav class="navbar fixed-top navbar-dark navbar-expand-lg navbar-scrolling-navbar">
+		    <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navBarToggle" aria-controls="navBarToggle" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="navbar-toggler-icon"></span>
+		    </button>
+		     
+		    <div class="collapse navbar-collapse" id="navBarToggle">
+			    <ul class="navbar-nav mr-auto">
+			        <li class="nav-item">
+			            <a th:href="@{/nameBeacons}" class="nav-link text-white">Nombre Baliza
+			            </a>
+			        </li>
+			        <li class="nav-item">
+			            <a th:href="@{/pairComponents}" class="nav-link text-white">Asignar Baliza
+			            </a>
+			        </li>
+			        <li class="nav-item">
+			            <a th:href="@{/unpairComponents}" class="nav-link text-white">Desemparejar Baliza
+			            </a>
+			        </li>
+			        <li class="nav-item">
+			            <a th:href="@{/addComponents}" class="nav-link text-white">A&ntilde;adir Componentes
+			            </a>
+			        </li>
+			        <li class="nav-item">
+			            <a th:href="@{/manageReceivers}" class="nav-link text-white">Administrar Receptores
+			            </a>
+			        </li>
+			        <li class="nav-item">
+			            <a th:href="@{/componentsInfo}" class="nav-link text-white">Informacion de componentes
+			            </a>
+			        </li>
+			        <li class="nav-item">
+			            <a th:href="@{/logout}" class="nav-link text-white">Log out
+			            </a>
+			        </li>
+			    </ul>
+		   	
+		    </div>
+		    
+		    
+		
+	</nav>
+	
+
+</body>
+</html>

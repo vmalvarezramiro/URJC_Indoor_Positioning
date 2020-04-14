@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="ISO-8859-1">
+</head>
+<body>
+	<div class="table_container">
+		<h1>Tabla de balizas</h1>
+		<div class="row col-md-12 table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Nombre</th>
+						<th>Mayor</th>
+						<th>Menor</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="be, rowStat: ${beaconsTableData}"
+						th:style="${rowStat.odd} ? 'color: gray' : 'color: black;'">
+						<td th:text="${be.id_bk}"></td>
+						<td th:if="${be.name}" th:text="${be.name}"></td>
+						<td th:unless="${be.name}" th:text=""></td>
+						<td th:text="${be.major}"></td>
+						<td th:text="${be.minor}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>

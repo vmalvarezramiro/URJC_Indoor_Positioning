@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="ISO-8859-1">
+
+<link rel="stylesheet" type="text/css" th:href="@{/css/indoorPositioning.css}"/>
+<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap_css/bootstrap.min.css}"/>
+<link rel="stylesheet" type="text/css" th:href="@{/css/ss_css/bootstrap-select.min.css}"/>
+<title>Nombre Baliza</title>
+</head>
+<body>
+<div th:insert="classpath:/templates/navbar.html">
+</div>
+
+<form action="#" th:action="@{/nameBeacons}" th:object="${allBeacons}"  method="post">
+<div class="content">
+	<div class="scroll">
+		<div th:each="b,status: ${allBeacons.beacons}" class="row" >
+			<div class="form-group col-md-6">
+				<label>Id Baliza: </label>
+				<input th:name="|beacons[__${status.index}__].id_bk|" readonly th:field="*{beacons[__${status.index}__].id_bk}" type="text" class="form-control" th:value="${b.id_bk}">
+			</div>
+			<div class="form-group col-md-6">
+				<label>Nombre Baliza: </label>
+				<input th:name="|beacons[__${status.index}__].name|" th:field="*{beacons[__${status.index}__].name}" th:unless="${b.name}" type="text" class="form-control">
+				<input th:name="|beacons[__${status.index}__].name|" th:field="*{beacons[__${status.index}__].name}" th:if="${b.name}" type="text" class="form-control" th:value="${b.name}">
+			</div>
+		</div>
+	</div>
+	<div class="row" >
+		<div class="form-group col-md-12 middleBtn">
+	    <button th:action="submit" class="form-group btn btn-bl col-md-3"><img class="icon" th:src="@{/icons/save.png}"><span class="d-none d-md-inline"> Actualizar cambios</span></button>
+	    </div>
+	</div>
+	
+</div>
+</form>
+<div class="imageContainer">
+<h2 th:if="${feedback}" th:text="${feedback}"></h2>
+</div>
+
+<script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+<script type="text/javascript" th:src="@{/js/Popper.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap_js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/ss_js/bootstrap-select.min.js}"></script>
+
+</body>
+</html>

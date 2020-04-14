@@ -1,0 +1,135 @@
+@charset "ISO-8859-1";
+
+.btn-bl {
+	background-color: white;
+	border: 1px solid #303030 !important;
+	color: #303030;
+	-webkit-transition-duration: 0.7s;
+}
+
+.btn-bl:hover {
+	background-color: #303030;
+	color: white;
+	border: 1px solid #ffffff;
+}
+
+.btn-bl:hover img {
+	filter: invert(100%) sepia(0%) saturate(7491%) hue-rotate(150deg)
+		brightness(120%) contrast(92%);
+	-webkit-transition-duration: 0.3s;
+}
+
+@media only screen and (min-width: 590px) {
+	.content {
+		margin-top: 70px;
+		margin-right: 20px;
+		margin-left: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (max-width: 590px) {
+	.content {
+		margin-top: 100px;
+		margin-right: 20px;
+		margin-left: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+.imageContainer {
+	align-self: auto;
+	text-align: center;
+}
+
+.navbar {
+	background-color: #303030;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+	color: black !important;
+}
+
+.selected.active, .selected:active li {
+	background-color: #dddddd !important;
+}
+
+.check-mark {
+	color: black
+}
+
+.navbar-brand.logo {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.logoImg {
+	max-width: 28%;
+}
+
+.selOption {
+	background: #ffffff !important;
+}
+
+input.form-control {
+	box-shadow: none !important;
+	border: 1px solid #303030 !important;
+}
+
+.middleBtn {
+	display: flex;
+	justify-content: center;
+}
+
+.noModif {
+	box-shadow: none;
+	border: 1px solid #303030 !important;
+}
+
+.icon {
+	max-width: 32px;
+	max-height: 32px;
+	padding-bottom: 5px;
+}
+
+.table_container {
+	margin-top: 60px;
+	margin-left: 5px;
+}
+
+.table_container thead {
+	font-size: 15px;
+	font-weight: 200 !important;
+	background-color: #303030;
+	color: white;
+}
+
+.table_container tbody {
+	background-color: #dfdfdf;
+}
+
+
+.table_container tr {
+	border-top: 3px solid white;
+}
+
+.map {
+	max-width: 100%;
+	max-height: auto;
+	padding: 1px;
+	border: 2px solid #021a40;
+	margin-bottom: 7px;
+}
+
+
+/* .scroll{ */
+/* 	/*To avoid the scroll bar showing in each browser */ */
+/* 	-ms-overflow-style: none;  Internet Explorer 10+ */
+/*     scrollbar-width: none;  Firefox */
+/* 	overflow-y: scroll; */
+/* 	overflow-x: hidden; */
+/* 	max-height: 720px; */
+}
+/* .scroll::-webkit-scrollbar {  */
+/*     display: none;  Safari and Chrome */
+/* } */

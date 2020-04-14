@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="ISO-8859-1">
+</head>
+<body>
+	<div class="table_container">
+		<h1>Tabla de Componentes</h1>
+		<div class="row col-md-12 table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Nombre</th>
+						<th>Fecha de Inicio</th>
+						<th>Fecha de Fin</th>
+						<th>Baliza</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="cmp, rowStat: ${componentsTableData}"
+						th:style="${rowStat.odd} ? 'color: gray' : 'color: black;'">
+						<td th:text="${cmp.id_cmp}"></td>
+						<td th:text="${cmp.name}"></td>
+						<td th:if="${cmp.s_date}" th:text="${cmp.s_date}"></td>
+						<td th:unless="${cmp.s_date}"></td>
+						<td th:if="${cmp.e_date}" th:text="${cmp.e_date}"></td>
+						<td th:unless="${cmp.e_date}"></td>
+						<td th:if="${cmp.getBeacon()!=null}" th:text="${cmp.getBeacon().getId_bk()}"></td>
+						<td th:unless="${cmp.getBeacon()!=null}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
