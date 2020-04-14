@@ -27,7 +27,7 @@
 > **Victor Manuel Alvarez Ramiro**<br/>
 >   * Email: vm.alvarezr@alumnos.urjc.es<br/>
 >   * Cuenta GitHub: vmalvarezramiro<br/>
->**Crístofer Barea Díaz**<br/>
+> **Crístofer Barea Díaz**<br/>
 >   * Email: c.barea@alumnos.urjc.es<br/>
 >   * Cuenta GitHub: cristofer-barea<br/>
 >
@@ -38,7 +38,7 @@
 > **Localizador:** Esta es la función principal de la aplicación y también la única accesible de manera pública. Te permite localizar el componente deseado en el plano del lugar.<br/>
 > ![Posicion](https://github.com/vmalvarezramiro/URJC_Indoor_Positioning/blob/master/localizador.jpg)
 > **Nombre baliza:** Asigna el nombre que quieras al id de cada beacon.<br/>
-> ![Nombrar beacons](https://github.com/vmalvarezramiro/URJC_Indoor_Positioning/blob/master/nombrar.jpg)
+> ![Nombrar beacons](https://github.com/vmalvarezramiro/URJC_Indoor_Positioning/blob/master/nombre.jpg)
 > **Asignar baliza:** Sirve para asignar un beacon a un componente en concreto.<br/>
 > ![Asignar beacons](https://github.com/vmalvarezramiro/URJC_Indoor_Positioning/blob/master/asignar.jpg)
 > **Desemparejar baliza:** Desparea un beacon del componente al que está asociado.<br/>
