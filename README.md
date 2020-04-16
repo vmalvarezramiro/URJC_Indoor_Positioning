@@ -30,7 +30,7 @@
 >
 > **Crístofer Barea Díaz**<br/>
 >   * Email: c.barea@alumnos.urjc.es<br/>
->   * Cuenta GitHub: cristofer-barea<br/>
+>   * Cuenta GitHub: cristofer-barea y EL-NAGASH<br/>
 >
 > ## Tablero Trello
 >  [Tablero URJC Indoor Positioning] (https://trello.com/b/yKEp1LAc/urjc-indoor-positioning)
