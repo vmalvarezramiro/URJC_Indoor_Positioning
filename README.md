@@ -59,5 +59,5 @@
 > ![Diagrama entidad-relacion](https://github.com/vmalvarezramiro/URJC_Indoor_Positioning/blob/master/entidad-relacion.jpg)
 >
 > ## Instrucciones para desplegar la aplicación
->  Para desplegar la aplicación será necesario tener un servidor Apache y las herramientas de desarrollo Java instaladas en el servidor, con el servidor Apache iniciado, solo queda ejecutar el archivo ".jar" del proyecto y cargar la base de datos (el archivo "indoor_positioning.sql"). Por último, en cualquier navegador abrir la dirección url: "https://localhost:8443/" para empezar a navegar por la aplicación web.<br/>
+>  Para desplegar la aplicación será necesario tener un servidor Apache y las herramientas de desarrollo Java instaladas en el servidor, con el servidor Apache iniciado, solo queda ejecutar el archivo ".jar" del proyecto y cargar la base de datos (el archivo "indoor_positioning.sql"). Por último, en cualquier navegador abrir la dirección url: "https://localhost:8443/" para empezar a navegar por la aplicación web. Para acceder a los elementos privados de la aplicación el usuario es: "admin" y la contraseña es: "adminpass" (sin las comillas).<br/>
 >
