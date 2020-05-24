@@ -30,6 +30,7 @@ public class ShowPositionController {
     public ModelAndView renderHomePageGet() {
 		return renderPageGet_SP2();
     }
+
 	@GetMapping("/showPosition2")
     public ModelAndView renderPageGet_SP2() {
 		ModelAndView mav= new ModelAndView("classpath:/templates/showPosition2.html");
