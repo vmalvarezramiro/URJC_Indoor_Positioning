@@ -61,3 +61,5 @@
 > ## Instrucciones para desplegar la aplicación
 >  Para desplegar la aplicación será necesario tener un servidor Apache y las herramientas de desarrollo Java instaladas en el servidor, con el servidor Apache iniciado, solo queda ejecutar el archivo "indoor_positioning2-0.0.1-SNAPSHOT.jar" y cargar la base de datos (el archivo "indoor_positioning.sql"). Por último, en cualquier navegador abrir la dirección url: "https://localhost:8443/" para empezar a navegar por la aplicación web. Para acceder a los elementos privados de la aplicación el usuario es: "admin" y la contraseña es: "adminpass" (sin las comillas).<br/>
 >
+> ## Diagrama Infraestructura HA
+> ![Diagrama HA](https://github.com/vmalvarezramiro/URJC_Indoor_Positioning/blob/master/Fase3_HA.png)
