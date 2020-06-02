@@ -67,7 +67,7 @@
 > ## Despliegue Fase3_HA
 > Para levantar el entorno tenemos que seguir los siguientes pasos, segun el esquema tenemos las siguientes maquinas
 > 
-> 1 BBDD
+> **1 BBDD**
 > 2 FRONTALES WEB
 > 1 PROXY
 > 
