@@ -63,3 +63,54 @@
 >
 > ## Diagrama Infraestructura HA
 > ![Diagrama HA](https://github.com/vmalvarezramiro/URJC_Indoor_Positioning/blob/master/Fase3_HA.png)
+> 
+> ## Despliegue Fase3_HA
+> Para levantar el entorno tenemos que seguir los siguientes pasos, segun el esquema tenemos las siguientes maquinas
+> 
+> 1 BBDD
+> 2 FRONTALES WEB
+> 1 PROXY
+> 
+> El os elegido para el entorno de pruebas es ubuntu he descargado la ultima version disponible en la web
+> 
+> Lo primero en la primera maquina instalamos la bbdd heos elegido mysql(mariadb) el fichero sql que hemos dejado en el repositorio es la bbdd de pruebas que hemos dejado podemos hacer
+> un import siguiendo los pasos que se detallan a continuacion
+> 
+> https://www.stackscale.com/es/blog/importar-exportar-bases-datos-mysql-mariadb/
+> 
+> una vez importada la bbdd ejecutamos el siguiente comando para configurar la variable global SET GLOBAL time_zone = '+3:00'
+> con esto configuramos esta variable con una zona horaria determinada y asi evitamos problemas de configuracion que podamos pasar en en el jar ya que se suele poner que se obtenga
+> la fecha de sistema y en mi caso a veces da fallos tambien por formatos españos, ingles etc como es una bbdd de prueba lo configuramos de esta manera.
+> La ip de esta maquina es 192.168.1.56
+> 
+> 
+> Despues vamos a levantar los dos frontales web para ello montaremos otras dos maquina y en cada una de ellas instalaremos java para poder ejecutar los jar compilados.
+> 
+> sudo apt update
+> sudo apt install openjdk-8-jdk
+> java -version
+> 
+> Con esto ya hemos instalado la version open de java para ubuntu y lo que tenemos que hacer es subir a cada uno de los frontales los jar que tenemos generados en el repositorio
+> una vez subido ejecutamos el siguiente comando para que se levante las instancias, no es necesario instalar ningun sw adicional ya que viene con un tomcat embebido que para 
+> nuestro entorno de estudio/proyecto me parece mas que suficiente.
+> Una vez subido el jar a la ruta que consideramos ejecutamos el siguiente comando para levantar la instancia
+> 
+> java -jar indoor_positioning2-0.0.1-SNAPSHOT.jar --server.address=192.168.1.61 --spring.datasource.url=jdbc:mysql://192.168.1.56:3306/indoor_positioning?useSSL=false --spring.datasource.username=usuario --spring.datasource.password=password --spring.jpa.hibernate.ddl-auto=update
+> java -jar indoor_positioning2-0.0.1-SNAPSHOT.jar --server.address=192.168.1.62 --spring.datasource.url=jdbc:mysql://192.168.1.56:3306/indoor_positioning?useSSL=false --spring.datasource.username=usuario --spring.datasource.password=password --spring.jpa.hibernate.ddl-auto=update
+> 
+> Aqui especificamos los siguientes parametros
+> 
+> --server.address la ip de la propia instancia como vemos en cada instancia ponemos la ip de la maquina
+> --spring.datasource.url -> la cadena de conexion donde tenemos alojada la bbdd y el puerto
+> --spring.datasource.username=usuario  -> usuario con privilegios sobre la bbdd
+> --spring.datasource.password=password -> usuario con privilegios sobre la bbdd
+> --spring.jpa.hibernate.ddl-auto=update -> modo apertura de la bbdd para actualizar registros
+> 
+> Despues debemos levantar la ultima maquina tambien en ubuntu e instalar HA proxy y configurar el proxy para hacer el balance la configuracion que hemos usado se la paso por una captura
+> he configurado el round robin y las dos instancias para su balance y ademas he configurado el ssl termination siguiendo las instrucciones que nos indica en los apuntes
+> 
+> –Generar certificado SSL para HAProxy
+> –Configurar HAProxy para usar el certificado y redirigir peticiones HTTP a HTTPS
+> –Deshabilitar HTTPS en la aplicación
+> 
+> https://serversforhackers.com/c/using-ssl-certificates-with-haproxy
