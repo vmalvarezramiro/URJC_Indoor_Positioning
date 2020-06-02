@@ -114,6 +114,9 @@
 > –Deshabilitar HTTPS en la aplicación
 > 
 > https://serversforhackers.com/c/using-ssl-certificates-with-haproxy
-
+>
 > ![Config HA](https://github.com/vmalvarezramiro/URJC_Indoor_Positioning/blob/master/haproxy.cfg)
+>
+>
+>
 > ![Config HA2](https://github.com/vmalvarezramiro/URJC_Indoor_Positioning/blob/master/haproxy_cfg.JPG)
